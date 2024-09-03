@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,500;0,600;1,500;1,600&display=swap');
+
+
+body,html {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", system-ui;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(210, 46%, 95%);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 60px auto;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    gap: 20px;
+    /* max-width: 100vw;
+    max-height: 100vh; */
+}
+
+.card {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 17px 20px 6px  hsl(0, 0%, 81%);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.hero {
+    border-radius: 80px;
+    text-align: center;
+    object-fit: cover;
+}
+
+ h4 {
+    display: inline-block;
+    /* text-align: center; */
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 25px;
+}
+
+h4 span {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.Bold-text {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 0;
+}
+.thin-text{
+    font-size: 13px;
+    font-weight: 200;
+}
+
+
+
+.Purple{
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-x: 80%;
+    background-size: 150px;
+}
+.clay{
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.navy{
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+
+}
+.white {
+    background-color: white;
+}
+
+
+
+/* responsive styles */
+@media (min-width: 600px) {
+    .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        width: 85vw;
+    }
+    .card{
+        max-height: max-content;
+    }
+    .Purple{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .clay {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    .Jeanette {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .navy{
+        grid-area: 2 / 2 / 3 / 4;
+    }
+    .Kira {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+}
