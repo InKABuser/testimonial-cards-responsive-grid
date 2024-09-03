@@ -47,6 +47,7 @@ body {
     border-radius: 80px;
     text-align: center;
     object-fit: cover;
+    border:2px solid hsl(210, 46%, 95%);
 }
 
  h4 {
